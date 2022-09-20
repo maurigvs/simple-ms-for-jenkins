@@ -1,4 +1,5 @@
 FROM openjdk:11
-EXPOSE 8000
-COPY "target/simple-ms-for-jenkins.jar" simple-ms-for-jenkins.jar
-CMD [ "java", "-jar", "simple-ms-for-jenkins.jar" ]
+VOLUME /tmp
+EXPOSE 8080
+ADD ./target/simple-ms-for-jenkins-0.0.1-SNAPSHOT.jar simple-ms-for-jenkins.jar
+ENTRYPOINT [ "java", "-jar", "/simple-ms-for-jenkins.jar" ]
