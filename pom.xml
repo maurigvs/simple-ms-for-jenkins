@@ -52,6 +52,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>simples-ms-for-jenkins</finalName>
     </build>
 
 </project>
